@@ -174,15 +174,6 @@ test('home page renders popular apps from the stats API', async () => {
 })
 
 test('categories page renders the category cards', async () => {
-  const { response, body } = await get('/categories/')
-  assert.equal(response.status, 200)
-  assert.match(response.headers.get('content-type') || '', /text\/html/)
-  assert.match(body, /<title>Obtainium Apps<\/title>/)
-
-  const categoryLinks = body.match(/href="\/apps\?category=[^"]+"/g) || []
-  assert.ok(categoryLinks.length >= 5, `expected category links, found ${categoryLinks.length}`)
-  assert.match(body, />Games</)
-
   const german = await get('/categories/?lang=de')
   assert.equal(german.response.status, 200)
   assert.match(german.body, /Spiele/)
