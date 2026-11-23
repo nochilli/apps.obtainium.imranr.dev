@@ -83,10 +83,13 @@ const adsenseId =
     style="font-family: 'Montserrat', system-ui, sans-serif;"
   >
     <KeepAndroidOpenBanner translations={translations} />
-    <header class="relative z-20">
-      <div class="container mx-auto px-4">
-        <div class="flex items-center justify-between py-4 md:py-5">
-          <a href="/" class="group flex items-center gap-2.5" aria-label={translations["title"]}>
+    <header
+      class="sticky top-0 z-40 border-b border-border bg-surface/80 backdrop-blur-sm"
+    >
+      <div class="container mx-auto px-4 py-3">
+        <div class="flex flex-wrap justify-between items-center gap-x-4 gap-y-1">
+          <div class="flex items-center gap-2.5 min-w-0">
+            <a href="/" class="group flex items-center gap-2.5" aria-label={translations["title"]}>
             <img src="/favicon.png" alt="" width="36" height="36" class="shrink-0 w-9 h-9 rounded-xl" />
             <span class="flex items-center gap-1.5 leading-none">
               <span class="text-xs sm:text-sm uppercase tracking-widest text-primary-600 font-bold">
@@ -94,33 +97,30 @@ const adsenseId =
               </span>
             </span>
           </a>
-
-          <nav class="flex items-center sm:gap-1.5" aria-label="Main">
-            <a
-              href="https://wiki.obtainium.imranr.dev/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="px-1 py-2 text-sm font-medium text-text-secondary hover:text-text transition-colors duration-200"
-            >
-              {translations["about"]}
-            </a>
-            <a
-            href="https://github.com/ImranR98/apps.obtainium.imranr.dev/issues"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="px-1 py-2 text-sm font-medium text-text-secondary hover:text-text transition-colors duration-200"
-            >
-            <span>{translations["contribute"]}</span>
-          </a>
-          <a
-            href="https://plausible.imranr.dev/apps.obtainium.imranr.dev"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="px-1 py-2 text-sm font-medium text-text-secondary hover:text-text transition-colors duration-200"
-          >
-            {translations["analytics"]}
-            </a>
-          </nav>
+          </div>
+          <div class="flex items-center gap-4 ml-auto">
+            <nav class="flex flex-wrap items-center gap-x-3 gap-y-1 sm:gap-x-4">
+              <a
+                href="https://wiki.obtainium.imranr.dev/"
+                target="_blank"
+                class="text-xs sm:text-sm font-medium text-text-secondary hover:text-primary-500 transition-colors"
+                >{translations["about"]}</a
+              >
+              <a
+                href="https://github.com/ImranR98/apps.obtainium.imranr.dev/issues"
+                target="_blank"
+                class="text-xs sm:text-sm font-medium text-text-secondary hover:text-primary-500 transition-colors"
+                >{translations["contribute"]}</a
+              >
+              <a
+                href="https://plausible.imranr.dev/apps.obtainium.imranr.dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-xs sm:text-sm font-medium text-text-secondary hover:text-primary-500 transition-colors"
+                >{translations["analytics"]}</a
+              >
+            </nav>
+          </div>
         </div>
       </div>
     </header>
