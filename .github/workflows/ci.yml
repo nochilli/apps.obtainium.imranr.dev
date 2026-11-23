@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [main]
+    branches: [revamp-build]
     paths-ignore:
       - '**/*.md'
       - 'docs/**'
@@ -88,7 +88,7 @@ jobs:
     name: publish
     needs: test
     if: >-
-      github.ref == 'refs/heads/main' &&
+      github.ref == 'refs/heads/revamp-build' &&
       (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
     timeout-minutes: 30
