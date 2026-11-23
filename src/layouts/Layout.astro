@@ -83,46 +83,44 @@ const adsenseId =
     style="font-family: 'Montserrat', system-ui, sans-serif;"
   >
     <KeepAndroidOpenBanner translations={translations} />
-    <header
-      class="sticky top-0 z-40 border-b border-border bg-surface/80 backdrop-blur-sm"
-    >
-      <div class="container mx-auto px-4 py-3">
-        <div class="flex flex-wrap justify-between items-center gap-x-4 gap-y-1">
-          <div class="min-w-0">
-            <h1>
-              <a
-                href="/"
-                class="text-lg font-bold text-text hover:text-primary-400 transition-colors"
-                >{translations["title"]}</a
-              >
-            </h1>
-             <h2 class="text-text-secondary font-semibold text-xs mt-0.5">
-              {translations["subtitle"]}
-            </h2>
-          </div>
-          <div class="flex items-center gap-4 ml-auto">
-            <nav class="flex flex-wrap items-center gap-x-3 gap-y-1 sm:gap-x-4">
-              <a
-                href="https://wiki.obtainium.imranr.dev/"
-                target="_blank"
-                class="text-xs sm:text-sm font-medium text-text-secondary hover:text-primary-500 transition-colors"
-                >{translations["about"]}</a
-              >
-              <a
-                href="https://github.com/ImranR98/apps.obtainium.imranr.dev/issues"
-                target="_blank"
-                class="text-xs sm:text-sm font-medium text-text-secondary hover:text-primary-500 transition-colors"
-                >{translations["contribute"]}</a
-              >
-              <a
-                href="https://plausible.imranr.dev/apps.obtainium.imranr.dev"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-xs sm:text-sm font-medium text-text-secondary hover:text-primary-500 transition-colors"
-                >{translations["analytics"]}</a
-              >
-            </nav>
-          </div>
+    <header class="relative z-20">
+      <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between py-4 md:py-5">
+          <a href="/" class="group flex items-center gap-2.5" aria-label={translations["title"]}>
+            <img src="/favicon.png" alt="" width="36" height="36" class="shrink-0 w-9 h-9 rounded-xl" />
+            <span class="flex items-center gap-1.5 leading-none">
+              <span class="text-xs sm:text-sm uppercase tracking-widest text-primary-600 font-bold">
+                {translations["title"]}
+              </span>
+            </span>
+          </a>
+
+          <nav class="flex items-center sm:gap-1.5" aria-label="Main">
+            <a
+              href="https://wiki.obtainium.imranr.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-1 py-2 text-sm font-medium text-text-secondary hover:text-text transition-colors duration-200"
+            >
+              {translations["about"]}
+            </a>
+            <a
+            href="https://github.com/ImranR98/apps.obtainium.imranr.dev/issues"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-1 py-2 text-sm font-medium text-text-secondary hover:text-text transition-colors duration-200"
+            >
+            <span>{translations["contribute"]}</span>
+          </a>
+          <a
+            href="https://plausible.imranr.dev/apps.obtainium.imranr.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-1 py-2 text-sm font-medium text-text-secondary hover:text-text transition-colors duration-200"
+          >
+            {translations["analytics"]}
+            </a>
+          </nav>
         </div>
       </div>
     </header>
@@ -131,15 +129,50 @@ const adsenseId =
       <slot />
     </main>
 
-    <footer class="border-t border-border py-4 mt-8">
-      <div class="container mx-auto px-4 text-center">
-        <a
-          class="text-xs text-text-subtle hover:text-primary-400 transition-colors"
-          href="https://github.com/ImranR98/apps.obtainium.imranr.dev"
-          target="_blank"
-        >
-          {translations["source"]}
-        </a>
+    <footer class="relative z-10 mt-12 border-t border-border bg-surface/60">
+      <div class="container mx-auto px-4 py-8">
+        <div class="flex flex-col items-center justify-between gap-6 md:flex-row">
+
+          <nav class="flex flex-wrap items-center justify-center gap-2 sm:gap-3" aria-label="Footer">
+            <a
+              href="/"
+              class="px-3 py-1.5 text-xs sm:text-sm font-medium rounded-full text-text-secondary hover:text-text hover:bg-surface-hover transition-colors duration-200"
+            >
+              {translations["goHome"]}
+            </a>
+            <a
+              href="/apps"
+              class="px-3 py-1.5 text-xs sm:text-sm font-medium rounded-full text-text-secondary hover:text-text hover:bg-surface-hover transition-colors duration-200"
+            >
+              {translations["apps"]}
+            </a>
+            <a
+              href="/categories"
+              class="px-3 py-1.5 text-xs sm:text-sm font-medium rounded-full text-text-secondary hover:text-text hover:bg-surface-hover transition-colors duration-200"
+            >
+              {translations["categories"]}
+            </a>
+            <a
+              href="https://github.com/ImranR98/apps.obtainium.imranr.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-3 py-1.5 text-xs sm:text-sm font-medium rounded-full text-text-secondary hover:text-text hover:bg-surface-hover transition-colors duration-200"
+            >
+              {translations["contribute"]}
+            </a>
+            <a
+              href="https://github.com/ImranR98/Obtainium"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-3 py-1.5 text-xs sm:text-sm font-medium rounded-full text-text-secondary hover:text-text hover:bg-surface-hover transition-colors duration-200"
+            >
+              {translations["source"]}
+            </a>
+          </nav>
+          <p class="text-xs text-text-subtle">
+            © {new Date().getFullYear()} Imran R
+          </p>
+        </div>
       </div>
     </footer>
 
