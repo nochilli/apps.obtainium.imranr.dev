@@ -20,7 +20,7 @@ const appCount = getApps().length;
       </p>
 
       {!compact && (
-        <div class="mt-8 grid grid-cols-2 sm:grid-cols-2 gap-3">
+        <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3">
           <a href="/apps" class="hero-feature group flex items-center gap-3 p-3.5 rounded-2xl bg-surface-hover border border-border hover:border-primary-500 hover:-translate-y-0.5 transition-all duration-200">
             <span class="shrink-0 w-9 h-9 rounded-xl bg-primary-50/80 flex items-center justify-center">
                         <svg class="w-7 h-7 text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
@@ -30,21 +30,6 @@ const appCount = getApps().length;
             <span class="min-w-0">
               <span class="block text-sm font-semibold text-text group-hover:text-primary-400 transition-colors">{translations["browseAllApps"]}</span>
                             <span class="block text-xs text-text-subtle truncate">{translations["browseAllAppsHint"]}</span>
-            </span>
-          </a>
-          <a href="/categories/" class="hero-feature group flex items-center gap-3 p-3.5 rounded-2xl bg-surface-hover border border-border hover:border-primary-500 hover:-translate-y-0.5 transition-all duration-200">
-            <span class="shrink-0 w-9 h-9 rounded-xl bg-primary-50/80 flex items-center justify-center">
-                        <svg class="w-7 h-7 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M4 4h6v6h-6l0 -6" />
-                                        <path d="M14 4h6v6h-6l0 -6" />
-                                        <path d="M4 14h6v6h-6l0 -6" />
-                                        <path d="M14 17a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-              </svg>
-            </span>
-            <span class="min-w-0">
-              <span class="block text-sm font-semibold text-text group-hover:text-primary-400 transition-colors">{translations["categories"]}</span>
-                            <span class="block text-xs text-text-subtle truncate">{translations["filterByCategory"]}</span>
             </span>
           </a>
           
