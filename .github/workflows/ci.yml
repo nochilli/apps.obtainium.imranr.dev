@@ -119,7 +119,7 @@ jobs:
           owner="$(echo "${GITHUB_REPOSITORY_OWNER}" | tr '[:upper:]' '[:lower:]')"
           {
             echo "tags<<EOF"
-            echo "ghcr.io/${owner}/apps.obtainium.imranr.dev:sha-${GITHUB_SHA}"
+            echo "ghcr.io/${owner}/apps.obtainium:sha-${GITHUB_SHA}"
             echo "EOF"
           } >> "$GITHUB_OUTPUT"
 
